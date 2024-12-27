@@ -256,6 +256,38 @@
   }
 }
 
+.type__wd {
+  padding: 32px 30px;
+  @include device__query(tablet) {
+    padding: 26px 4px;
+  }
+  .info {
+    align-items: flex-start;
+  }
+  .title {
+    @include flex__column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 8px;
+    @include device__query(tablet) {
+      margin-top: 4px;
+    }
+    span {
+      color: #777;
+      margin-top: 15px;
+      @include device__query(tablet) {
+        margin-top: 8px;
+      }
+    }
+  }
+  .badge {
+    padding: 10px 23.5px;
+    @include device__query(tablet) {
+      padding: 7px 15px;
+    }
+  }
+}
+
 @keyframes accordion {
   0% {
     padding-top: 0;

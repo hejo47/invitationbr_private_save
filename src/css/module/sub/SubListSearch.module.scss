@@ -61,3 +61,34 @@
     }
   }
 }
+
+.type__wc {
+  @include flex__column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 32px;
+  padding-bottom: 48px;
+  @include device__query(tablet) {
+    row-gap: 24px;
+    padding-bottom: 40px;
+  }
+  .sub__list_small {
+    font-size: $font-size--setting-lg;
+    @include device__query(tablet) {
+      font-size: $font-size--setting-ssm;
+    }
+    span {
+      color: $text-color--essential !important;
+    }
+  }
+  .sub__list_large {
+    font-size: 32px;
+    font-family: "GowunBatang";
+    font-weight: $font-weight--Medium;
+    letter-spacing: -0.03em;
+    line-height: 1.6em;
+    @include device__query(tablet) {
+      font-size: 18px;
+    }
+  }
+}
