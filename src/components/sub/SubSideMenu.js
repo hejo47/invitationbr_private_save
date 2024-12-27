@@ -1,10 +1,10 @@
 /* import */
-import { useContext, useEffect, useRef } from "react";
+// import { useContext, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 /* CSS Module */
 import styles from "../../css/module/sub/SubSideMenu.module.scss";
 /* Context */
-import { SetContext } from "../../store/option-set-context.js";
+// import { SetContext } from "../../store/option-set-context.js";
 /* Image */
 
 const SubSideMenu = ({ menuList }) => {

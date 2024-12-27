@@ -1,16 +1,16 @@
 /* import */
-import { useContext } from "react";
+// import { useContext } from "react";
 import { Link } from "react-router-dom";
 /* CSS Module */
 import styles from "../../css/module/sub/SubFooter.module.scss";
 /* Context */
-import { SetContext } from "../../store/option-set-context.js";
+// import { SetContext } from "../../store/option-set-context.js";
 /* Image */
 import logoImg from "../../img/main/logo.svg";
-import myInfo from "../../img/icon/icon_info.png";
+// import myInfo from "../../img/icon/icon_info.png";
 
 const SubFooter = () => {
-  const { isMobile } = useContext(SetContext);
+  // const { isMobile } = useContext(SetContext);
   return (
     <footer className={styles.sub__footer}>
       <div className={styles.sub__footer_wrapper}>
@@ -28,10 +28,10 @@ const SubFooter = () => {
         </div>
         <ul className={styles.menu}>
           <li>
-            <a href="#">이용약관</a>
+            <Link to="/">이용약관</Link>
           </li>
           <li>
-            <a href="#">개인정보처리방침</a>
+            <Link to="/">개인정보처리방침</Link>
           </li>
         </ul>
         <p className={styles.copy}>

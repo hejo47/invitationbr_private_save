@@ -220,13 +220,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    column-gap: 8px;
+    column-gap: 24px;
     padding: 31px 32px;
     background: $bg-color--default;
     display: none;
     animation: 0.2s linear accordion forwards;
     @include device__query(tablet) {
       padding: 24px 16px;
+      column-gap: 8px;
       animation: 0.2s linear accordionMo forwards;
     }
     p {
@@ -234,10 +235,11 @@
       font-weight: $font-weight--Medium;
       line-height: 1.5em;
       margin-top: 12px;
-      word-break: break-all;
+      word-break: keep-all;
       white-space: pre-line;
       @include device__query(tablet) {
         margin-top: 4px;
+        font-size: $font-size--setting-sm;
       }
     }
   }
