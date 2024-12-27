@@ -2,8 +2,12 @@
 .sub__side_menu {
   @include position(st, 188px, 0);
   @include device__query(tablet) {
-    @include position(s);
     width: 100%;
+    top: 59px;
+    background: #FFF;
+    z-index: 99;
+    padding-top: 15px;
+    border-bottom: 1px solid $border-color--default;
   }
   &_wrapper {
     width: 360px;
