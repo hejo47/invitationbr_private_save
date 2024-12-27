@@ -1,6 +1,5 @@
 /* import */
-import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 /* CSS Module */
 import styles from "../../css/module/sub/SubList.module.scss";
 /* Component */
@@ -8,9 +7,9 @@ import SubListSearch from "./SubListSearch.js";
 import SubListItemAc from "./SubListItemAc.js";
 import SubPaging from "./SubPaging.js";
 /* Context */
-import { SetContext } from "../../store/option-set-context.js";
+// import { SetContext } from "../../store/option-set-context.js";
 /* Image */
-import iconClipImg from "../../img/icon/icon_clip.png";
+// import iconClipImg from "../../img/icon/icon_clip.png";
 
 const SubListAc = ({ list }) => {
   const [ activeQna, setActiveQna ] = useState();

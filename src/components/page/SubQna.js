@@ -1,7 +1,5 @@
 /* import */
-import { useContext } from "react";
-import { useLocation } from "react-router-dom";
-import ReactDOM from "react-dom";
+// import { useContext } from "react";
 /* CSS */
 import styles from "../../css/module/page/SubNotice.module.scss";
 /* Component */
@@ -10,7 +8,7 @@ import SubWrapper from "../sub/SubWrapper.js";
 import SubSideMenu from "../sub/SubSideMenu.js";
 import SubListAc from "../sub/SubListAc.js";
 // Context
-import { SetContext } from "../../store/option-set-context.js";
+// import { SetContext } from "../../store/option-set-context.js";
 
 const menuList = [
   {
@@ -194,7 +192,7 @@ const noticeList = [
 ]
 
 const SubWedding = () => {
-  const { isMobile } = useContext(SetContext);
+  // const { isMobile } = useContext(SetContext);
   return (
     <div className={styles.sub__notice}>
       <SubTitle 
