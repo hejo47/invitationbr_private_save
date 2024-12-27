@@ -29,40 +29,7 @@ const menuList = [
 
 const noticeList = [
   {
-    src: "/Notice/Detail",
-    type: "공지",
-    title: "모바일 청첩장 서비스 시작",
-    file: "",
-    date: "2024-12-03"
-  },
-  {
-    src: "/Notice/Detail",
-    type: "공지",
-    title: "모바일 청첩장 서비스 이용방법",
-    file: "",
-    date: "2024-12-03"
-  },
-  {
-    src: "/Notice/Detail",
-    type: "공지",
-    title: "축하 화환 상품 추가",
-    file: "",
-    date: "2024-12-03"
-  },
-  {
-    src: "/Notice/Detail",
-    type: "안내",
-    title: "운영 시간 조기 마감 안내",
-    file: "",
-    date: "2024-12-03"
-  },
-  {
-    src: "/Notice/Detail",
-    type: "공지",
-    title: "12월 고객센터 휴무 안내(12/29. 12/30. 12/31)",
-    file: "",
-    date: "2024-12-03"
-  },
+  }
 ]
 
 const SubWedding = () => {
@@ -76,7 +43,7 @@ const SubWedding = () => {
       />
       <SubWrapper>
         <SubSideMenu menuList={menuList}></SubSideMenu>
-        <SubList list={noticeList}></SubList>
+        
       </SubWrapper>
     </div>
   )
