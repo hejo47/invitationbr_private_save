@@ -277,6 +277,7 @@
       margin-top: 15px;
       @include device__query(tablet) {
         margin-top: 8px;
+        font-size: $font-size--setting-sm;
       }
     }
   }
