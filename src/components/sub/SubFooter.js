@@ -12,12 +12,12 @@ import myInfo from "../../img/icon/icon_info.png";
 const SubFooter = () => {
   const { isMobile } = useContext(SetContext);
   return (
-    <footer class={styles.sub__footer}>
-      <div class={styles.sub__footer_wrapper}>
-        <div class={styles.logo}>
+    <footer className={styles.sub__footer}>
+      <div className={styles.sub__footer_wrapper}>
+        <div className={styles.logo}>
           <img src={logoImg} alt="시집가는 날 로고" />
         </div>
-        <div class={styles.info}>
+        <div className={styles.info}>
           <ul>
             <li>대표이사 오준오</li>
             <li>사업자등록번호 604-81-37410</li>
@@ -26,7 +26,7 @@ const SubFooter = () => {
           </ul>
           <p>서울특별시 중구 세종대로 73 태평로빌딩 23층~27층</p>
         </div>
-        <ul class={styles.menu}>
+        <ul className={styles.menu}>
           <li>
             <a href="#">이용약관</a>
           </li>
@@ -34,7 +34,7 @@ const SubFooter = () => {
             <a href="#">개인정보처리방침</a>
           </li>
         </ul>
-        <p class={styles.copy}>
+        <p className={styles.copy}>
           Copyright © Weddingday All Rights Reserved.
         </p>
       </div>

@@ -14,7 +14,14 @@ const SubSideMenu = ({ menuList }) => {
       <div className={styles.sub__side_menu_wrapper}>
         <ul>
           {menuList.map((item, idx) => (
-            <li><Link to={item.src} className={location.pathname === "/Notice/" ? styles.active : ""}>{item.title}</Link></li>
+            <li key={item.src + idx}>
+              <Link 
+                to={item.src} 
+                className={location.pathname === "/Notice/" ? styles.active : ""}
+              >
+                {item.title}
+              </Link>
+            </li>
             // 주소 마지막 슬래시 제거
           ))}
         </ul>
