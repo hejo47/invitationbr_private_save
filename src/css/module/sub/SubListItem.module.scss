@@ -170,3 +170,117 @@
     }
   }
 }
+
+
+.type__ac {
+  &.sub__list_ltem {
+    @include flex__column;
+    .info {
+      column-gap: 24px;
+      @include device__query(tablet) {
+        column-gap: 8px;
+      }
+    } 
+    .title {
+      margin-left: -8px;
+      word-break: keep-all;
+      @include device__query(tablet) {
+        margin-left: 4px;
+      }
+    }
+  }
+  .quest__img {
+    width: 48px;
+    height: 48px;
+    @include device__query(tablet) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .img__wrap {
+    svg {
+      fill: #2D2D2D;
+      color: #2D2D2D;
+      transform: rotate(-180deg);
+    }
+  }
+  .sub__list_ltem__wrapper {
+    @include flex__row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 31px 32px;
+    cursor: pointer;
+    @include device__query(tablet) {
+      padding: 24px 16px;
+    }
+  }
+  .answer__info {
+    @include flex__row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    column-gap: 8px;
+    padding: 31px 32px;
+    background: $bg-color--default;
+    display: none;
+    animation: 0.2s linear accordion forwards;
+    @include device__query(tablet) {
+      padding: 24px 16px;
+      animation: 0.2s linear accordionMo forwards;
+    }
+    p {
+      color: #525252;
+      font-weight: $font-weight--Medium;
+      line-height: 1.5em;
+      margin-top: 12px;
+      word-break: break-all;
+      white-space: pre-line;
+      @include device__query(tablet) {
+        margin-top: 4px;
+      }
+    }
+  }
+  &.active {
+    .img__wrap {
+      svg {
+        transform: rotate(0);
+        animation: 0.2s linear accordionArrow forwards;
+      }
+    }
+    .answer__info {
+      @include flex__row;
+    }
+  }
+}
+
+@keyframes accordion {
+  0% {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  100% {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+@keyframes accordionMo {
+  0% {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  100% {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@keyframes accordionArrow {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

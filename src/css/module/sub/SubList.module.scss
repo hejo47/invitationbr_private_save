@@ -11,4 +11,9 @@
       width: 100%;
     }
   }
+  &.type__ac {
+    ul {
+      flex-direction: column;
+    }
+  }
 }
