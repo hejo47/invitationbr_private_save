@@ -1,6 +1,6 @@
 @import "../../_module";
 .sub__side_menu {
-  @include position(st, 0, 0);
+  @include position(st, 188px, 0);
   @include device__query(tablet) {
     @include position(s);
     width: 100%;
