@@ -5,11 +5,10 @@
   background: #FFF;
   z-index: 10000;
   animation: 0.3s ease headerActive backwards;
-
   @include device__query(tablet) {
     @include position(f, 0, 0, null, 0);
-    z-index: 999;
-    height: 60px;
+    z-index: 9999;
+    height: unset;
   }
   &.active {
     .sub__header_wrapper {
@@ -28,7 +27,7 @@
     .sub__menu {
       @include device__query(tablet) {
         @include position(a, 60px, 0, 0, 0);
-        display: block;
+        @include flex__column;
         width: 100%;
         transform: unset;
         padding: 24px 20px;
@@ -63,6 +62,9 @@
     margin: 0 auto;
     border-bottom: 1px solid $border-color--default;
     animation: 0.3s ease headerActive backwards;
+    @include device__query(tablet) {
+      height: 60px;
+    }
     .logo {
       width: 151px;
       height: 29px;
@@ -115,6 +117,9 @@
   height: 100%;
   @include device__query(tablet) {
     display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 8px;
   }
   &_mo {
     background: transparent;
@@ -129,6 +134,9 @@
   }
   > li {
     height: 100%;
+    @include device__query(tablet) {
+      width: 100%;
+    }
     a {
       @include position;
       @include flex__row;
@@ -139,6 +147,11 @@
       font-weight: 600;
       white-space: nowrap;
       transition: $transition--morefast;
+      @include device__query(tablet) {
+        justify-content: space-between;
+        font-size: $font-size--setting-sl;
+        width: 100%;
+      }
       &::after {
         @include device__query(notablet) {
           @include position(a, null, 0, 0);

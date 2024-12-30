@@ -50,9 +50,8 @@ const ManageList = ({ noticeList }) => {
       <div className={styles.manage__list_wrap}>
         <ul>
           {inviteList.map((item, idx) => (
-            <>
+            <div key={idx + item.id}>
               <ManageItem 
-                key={item.id}
                 inviteIdx={idx}
                 inviteItem={item}
                 onChange={setInviteList}
@@ -65,10 +64,10 @@ const ManageList = ({ noticeList }) => {
                     open={open}
                     onClose={() => setOpen(false)}
                     onOpen={() => setOpen(true)}
-                  /> : null
+                  ><span style={{ opacity: "0" }}></span></BasicTooltip> : null
                 }
               </ManageItem>
-            </>
+            </div>
           ))}
         </ul>
       </div>

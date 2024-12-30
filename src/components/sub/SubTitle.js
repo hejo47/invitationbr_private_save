@@ -49,55 +49,57 @@ const SubTitle = ({ subTitle, subContent, subPhoto, type }) => {
   //   }
   // }, []);
   useEffect(() => {
-    const element = photoRef.current;
-    if (!isMobile) {
-      gsap.fromTo(
-        element,
-        { width: "50vw",
-          height: "40vh",
-          borderRadius: "16px"
-        },
-        {
-          width: "100vw",
-          height: "80vh",
-          borderRadius: "0px",
-          duration: 1,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: element,
-            scroller: "body",
-            start: "top", 
-            end: "+=50%", 
-            scrub: true,
-            markers: true, 
+    if(type !== "mng") {
+      const element = photoRef.current;
+      if (!isMobile) {
+        gsap.fromTo(
+          element,
+          { width: "50vw",
+            height: "40vh",
+            borderRadius: "16px"
           },
-        }
-      );
-    } else if (isMobile) {
-      gsap.fromTo(
-        element,
-        { width: "50vw",
-          height: "15vh",
-          borderRadius: "16px"
-        },
-        {
-          width: "100vw",
-          height: "70%",
-          borderRadius: "0px",
-          duration: 1,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: element,
-            scroller: "body",
-            start: "top", 
-            end: "+=10%", 
-            scrub: true,
-            // markers: true, 
+          {
+            width: "100vw",
+            height: "80vh",
+            borderRadius: "0px",
+            duration: 1,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: element,
+              scroller: "body",
+              start: "top", 
+              end: "+=50%", 
+              scrub: true,
+              markers: true, 
+            },
+          }
+        );
+      } else if (isMobile) {
+        gsap.fromTo(
+          element,
+          { width: "50vw",
+            height: "15vh",
+            borderRadius: "16px"
           },
-        }
-      );
+          {
+            width: "100vw",
+            height: "70%",
+            borderRadius: "0px",
+            duration: 1,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: element,
+              scroller: "body",
+              start: "top", 
+              end: "+=10%", 
+              scrub: true,
+              // markers: true, 
+            },
+          }
+        );
+      }
+      ScrollTrigger.refresh();
     }
-    ScrollTrigger.refresh();
   }, [isMobile]);
   return (
     <div 

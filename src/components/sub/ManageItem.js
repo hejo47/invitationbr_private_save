@@ -28,7 +28,6 @@ const ManageItem = ({ inviteIdx, inviteItem, onChange, children }) => {
               value={inviteItem.use}
               control={
                 <Switch 
-                  defaultChecked={inviteItem.use} 
                   checked={inviteItem.use} 
                   onChange={() => (
                     onChange((prev) => (

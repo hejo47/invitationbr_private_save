@@ -18,6 +18,7 @@ const SubHeader = () => {
   const location = useLocation();
   const moHeaderRef = useRef(null);
   const headerRef = useRef(null);
+  const subRef = useRef(null);
   const [lastScroll, setLastScroll] = useState(0);
   const handleScroll = () => {
     const currentScroll = window.scrollY;
@@ -33,7 +34,7 @@ const SubHeader = () => {
       headerRef.current.style.display = "flex"; 
     } else if (lastScroll < currentScroll) {
       headerRef.current.style.display = "none"; 
-      headerRef.current.classList.remove(styles.active); 
+      headerRef.current.classList.remove(styles.active);
     }
     setLastScroll(currentScroll);
   };
@@ -45,24 +46,77 @@ const SubHeader = () => {
       };
     }
   }, [isMobile, lastScroll]); // 의존성 추가
+  useEffect(() => {
+    if (isMobile && activeMenu) {
+      document.documentElement.style.overflowY = "hidden";
+    } else {
+      document.documentElement.style.overflowY = "scroll";
+    }
+  }, [isMobile, activeMenu])
   return (
     <div className={`${styles.sub__header} ${activeMenu && isMobile ? styles["active"] : ""}`}>
       <div className={`${styles.sub__header_wrapper} ${styles.active}`} ref={headerRef}>
         <Link to="/Manager" className={styles.logo}>
           <img src={logoImg} alt="시집가는 날" />
         </Link>
-        <div>
+        <div className={styles.sub_ref} ref={subRef}>
           <ul className={`${styles.sub__menu}`}>
-            <li><Link to="/Produce">청첩장 만들기</Link></li>
-            {/* <li><Link to="/">감사장 만들기</Link></li> */}
-            <li><Link to="/Manager" className={location.pathname.includes("/Manager") ? styles.active : ""}>제작 관리</Link></li>
-            <li><Link to="/Wedding" className={location.pathname.includes("/Wedding") ? styles.active : ""}>예식순서</Link></li>
-            <li><Link to="/Notice" className={location.pathname.includes("/Notice") ? styles.active : ""}>공지사항</Link></li>
-            <li><Link to="/Qna" className={location.pathname.includes("/Qna") ? styles.active : ""}>자주하는 질문</Link></li>
+            <li>
+              <Link 
+                to="/Produce">
+                청첩장 만들기
+                <img src={rightImg} alt="" />
+              </Link>
+            </li>
+            {/* <li>
+            <Link 
+              to="/">감사장 만들기
+            </Link> 
+            </li> */}
+            <li>
+              <Link 
+                to="/Manager" 
+                className={location.pathname.includes("/Manager") ? styles.active : ""}
+                onClick={() => setActiveMenu(false)}
+              >
+                제작 관리
+                <img src={rightImg} alt="" />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/Wedding" 
+                className={location.pathname.includes("/Wedding") ? styles.active : ""}
+                onClick={() => setActiveMenu(false)}
+              >
+                예식순서
+                <img src={rightImg} alt="" />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/Notice" 
+                className={location.pathname.includes("/Notice") ? styles.active : ""}
+                onClick={() => setActiveMenu(false)}
+              >
+                공지사항
+                <img src={rightImg} alt="" />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/Qna" 
+                className={location.pathname.includes("/Qna") ? styles.active : ""}
+                onClick={() => setActiveMenu(false)}
+              >
+                자주하는 질문
+                <img src={rightImg} alt="" />
+              </Link>
+            </li>
           </ul>
           <ul className={styles.sub__tool}>
-            <li><Link tp="/"><img src={myInfo} alt="" /><span>정보수정</span></Link></li>
-            <li><Link tp="/"><span>로그아웃</span></Link></li>
+            <li><Link to="/"><img src={myInfo} alt="" /><span>정보수정</span></Link></li>
+            <li><Link to="/"><span>로그아웃</span></Link></li>
           </ul>
         </div>
         {isMobile && (
