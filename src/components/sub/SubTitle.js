@@ -78,12 +78,12 @@ const SubTitle = ({ subTitle, subContent, subPhoto, type }) => {
         gsap.fromTo(
           element,
           { width: "50vw",
-            height: "15vh",
+            height: "12vh",
             borderRadius: "16px"
           },
           {
             width: "100vw",
-            height: "70%",
+            height: "25vh",
             borderRadius: "0px",
             duration: 1,
             ease: "power1.out",
