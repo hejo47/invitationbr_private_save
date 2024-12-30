@@ -3,8 +3,9 @@
   @include position(f, 0, 0, null, 0);
   height: 88px;
   background: #FFF;
-  border-bottom: 1px solid $border-color--default;
   z-index: 10000;
+  animation: 0.3s ease headerActive backwards;
+
   @include device__query(tablet) {
     @include position(f, 0, 0, null, 0);
     z-index: 999;
@@ -60,6 +61,8 @@
     height: 100%;
     padding: 0 20px;
     margin: 0 auto;
+    border-bottom: 1px solid $border-color--default;
+    animation: 0.3s ease headerActive backwards;
     .logo {
       width: 151px;
       height: 29px;
@@ -69,6 +72,34 @@
       }
       img {
         width: 100%;
+      }
+    }
+    &.mo {
+      display: none;
+      padding-left: 6px;
+      justify-content: flex-start;
+      background: #FFF;
+      filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.03));
+      border: none;
+      height: 60px;
+      animation: 0.3s ease headerActive backwards;
+      a {
+        @include flex__row;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        padding: 0 5px;
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      h2 {
+        font-size: $font-size--setting-default;
+        font-weight: $font-weight--SemiBold;
+      }
+      &.active {
+        @include flex__row;
       }
     }
   }
@@ -179,5 +210,14 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes headerActive {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
