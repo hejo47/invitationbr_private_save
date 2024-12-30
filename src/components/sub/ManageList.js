@@ -1,17 +1,12 @@
 /* import */
-import { useContext, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 /* CSS Module */
 import styles from "../../css/module/sub/ManageList.module.scss";
 /* Component */
 import ManageItem from "../sub/ManageItem.js";
 import BasicTooltip from "../layout/BasicTooltip.js";
-/* Context */
-import { SetContext } from "../../store/option-set-context.js";
-/* Image */
 
-const ManageList = ({ noticeList }) => {
-  const { isMobile } = useContext(SetContext);
+const ManageList = () => {
   const [open, setOpen] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setOpen(false), 6000);

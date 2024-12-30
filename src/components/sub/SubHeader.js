@@ -45,7 +45,7 @@ const SubHeader = () => {
         window.removeEventListener("scroll", handleScroll); 
       };
     }
-  }, [isMobile, lastScroll]); // 의존성 추가
+  }, [isMobile, lastScroll]);
   useEffect(() => {
     if (isMobile && activeMenu) {
       document.documentElement.style.overflowY = "hidden";

@@ -1,5 +1,4 @@
 /* import */
-import { useContext, useState, useEffect } from "react";
 import { Link, useNavigate  } from "react-router-dom";
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -9,16 +8,11 @@ import Button from "../layout/Button.js";
 import ButtonWrapper from "../layout/ButtonWrapper.js";
 /* CSS Module */
 import styles from "../../css/module/sub/ManageItem.module.scss";
-/* Context */
-import { SetContext } from "../../store/option-set-context.js";
 /* Image */
 import rightArrowImg from "../../img/icon/icon_arrow_right.png";
 
-const label = { inputProps: { 'aria-label': 'Switch use' } };
 const ManageItem = ({ inviteIdx, inviteItem, onChange, children }) => {
-  const { isMobile } = useContext(SetContext);
   const navigate = useNavigate();
-
   return (
     <li className={`${styles.manage__item} ${inviteItem.use ? styles.active : styles.disabled}`}>
       <div className={styles.manage__item_wrap}>
