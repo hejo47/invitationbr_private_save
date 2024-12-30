@@ -1,44 +1,49 @@
 /* Pretendard - ExtraLight */
 @font-face {
   font-family: 'Pretendard';
+  font-weight: 100;
+  src: url('../font/Pretendard/Pretendard-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Pretendard';
   font-weight: 200;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-ExtraLight.woff2') format('woff2');
 }
 /* Pretendard - Light */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 300;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-Light.woff2') format('woff2');
 }
 /* Pretendard - Regular */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 400;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-Regular.woff2') format('woff2');
 }
 /* Pretendard - Medium */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 500;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-Medium.woff2') format('woff2');
 }
 /* Pretendard - SemiBold */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 600;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
 }
 /* Pretendard - Bold */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 700;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-Bold.woff2') format('woff2');
 }
 /* Pretendard - ExtraBold */
 @font-face {
   font-family: 'Pretendard';
   font-weight: 800;
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+  src: url('../font/Pretendard/Pretendard-ExtraBold.woff2') format('woff2');
 }
 /* SeoulHangang - Light */
 // @font-face {
