@@ -304,35 +304,35 @@
   "selectTabList": ["tabLetter", "tabDate", "tabGallery", "tabLocation"],
   "selectIntroPhoto": [
     {
-      "src": "/img/intro/intro_photo1.png",
+      "src": "./img/intro/intro_photo1.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo2.png",
+      "src": "./img/intro/intro_photo2.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo3.png",
+      "src": "./img/intro/intro_photo3.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo4.png",
+      "src": "./img/intro/intro_photo4.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo5.png",
+      "src": "./img/intro/intro_photo5.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo6.png",
+      "src": "./img/intro/intro_photo6.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo7.png",
+      "src": "./img/intro/intro_photo7.png",
       "alt": ""
     },
     {
-      "src": "/img/intro/intro_photo8.png",
+      "src": "./img/intro/intro_photo8.png",
       "alt": ""
     }
   ],
@@ -341,19 +341,19 @@
   "selectGalleryView": false,
   "selectGalleryPhotoList": [
     {
-      "src": "/img/gallery/slide_photo_test.png",
+      "src": "./img/gallery/slide_photo_test.png",
       "alt": ""
     },
     {
-      "src": "/img/gallery/slide_photo_test.png",
+      "src": "./img/gallery/slide_photo_test.png",
       "alt": ""
     },
     {
-      "src": "/img/gallery/slide_photo_test.png",
+      "src": "./img/gallery/slide_photo_test.png",
       "alt": ""
     },
     {
-      "src": "/img/gallery/slide_photo_test.png",
+      "src": "./img/gallery/slide_photo_test.png",
       "alt": ""
     }
   ],
@@ -544,21 +544,21 @@
       "title": "포토부스",
       "id": "noticeTab1",
       "content": "포토부스가 예식장 좌측에 설치될 예정이오니\n바쁘시더라도 가벼운 마음으로 즐겨주세요~",
-      "src": "/img/notice/notice_photo_test1.png",
+      "src": "./img/notice/notice_photo_test1.png",
       "position": "top"
     },
     {
       "title": "식사안내",
       "id": "noticeTab2",
       "content": "웨딩홀 5층 아스테라뷔페에서 드실 수 있습니다.\n시그니처 메뉴인 등심 스테이크도 꼭 맛보고 가세요.",
-      "src": "/img/notice/notice_photo_test2.png",
+      "src": "./img/notice/notice_photo_test2.png",
       "position": "top"
     },
     {
       "title": "주차안내",
       "id": "noticeTab3",
       "content": "웨딩홀 왼쪽에 위치한 주차타워를 이용해 주세요.\n2시간 무료주차가 가능합니다.",
-      "src": "/img/notice/notice_photo_test3.png",
+      "src": "./img/notice/notice_photo_test3.png",
       "position": "bottom"
     }
   ],
@@ -567,7 +567,7 @@
       "title": "",
       "id": "noticeDivide",
       "content": "",
-      "src": "/img/notice/notice_photo_test4.png",
+      "src": "./img/notice/notice_photo_test4.png",
       "position": "top"
     }
   ],
@@ -579,7 +579,7 @@
     {
       "content": "",
       "id": "outroLetter",
-      "src": "/img/outro/outro_photo_test1.png",
+      "src": "./img/outro/outro_photo_test1.png",
       "position": "top"
     }
   ],
