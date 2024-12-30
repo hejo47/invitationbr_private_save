@@ -147,7 +147,8 @@
   }
   .date {
     @include flex__column;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     row-gap: 4px;
     margin-top: 20px;
     text-align: center;

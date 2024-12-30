@@ -2,13 +2,15 @@
 .tab__list {
   @include flex__row;
   flex-wrap: wrap;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   width: 100%;
   column-gap: 5px;
   margin-bottom: 4px;
   .tab__item {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     padding: 8px 20px;
     font-size: $font-size--setting-xsm;
     border-radius: $radius--button-list;

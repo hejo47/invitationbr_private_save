@@ -36,7 +36,8 @@
   &__header {
     width: 100%;
     @include flex__column;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 8px;
     img {
       width: 24px;

@@ -32,7 +32,8 @@
 
 .txt__picker {
   @include flex__row;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   flex-shrink: 0;
   width: 60px;
   height: 40px;

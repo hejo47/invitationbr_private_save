@@ -36,7 +36,8 @@
       }
       textarea, input {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         padding-left: 16px;
       }
     }

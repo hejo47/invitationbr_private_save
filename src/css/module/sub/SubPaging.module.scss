@@ -2,7 +2,8 @@
 .paging {
   @include device__query(tablet) {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
   }
   &.content {
     @include device__query(tablet) {
@@ -68,7 +69,8 @@
         }
         a {
           @include flex__row;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           width: 100%;
           column-gap: 16px;
           @include device__query(tablet) {
@@ -88,14 +90,16 @@
   }
   &__wrapper {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
       column-gap: 8px;
       margin-top: 80px;
     }
   &__item {
     a {
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       width: 48px;
       height: 48px;
       color: #707070;
@@ -138,7 +142,8 @@
 
 .badge {
   @include flex__row;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   font-size: $font-size--setting-sm;
   padding: 10px 18px;
   background: #F6F7F8;

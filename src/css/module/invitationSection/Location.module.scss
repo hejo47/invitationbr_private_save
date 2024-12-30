@@ -58,7 +58,8 @@
         padding: 20px 20px;
         a {
           @include flex__row;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           column-gap: 10px;
           img {
             width: 24px;

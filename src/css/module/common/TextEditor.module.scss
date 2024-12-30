@@ -31,7 +31,8 @@
       }
       button {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         width: 24px;
         height: 24px;
         border-radius: 4px;

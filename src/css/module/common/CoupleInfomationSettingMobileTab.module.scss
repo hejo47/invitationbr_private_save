@@ -1,7 +1,8 @@
 @import "../../_module";
 .mobile__tab {
   @include flex__row;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   column-gap: 4px;
   width: 100%;
   margin-bottom: 8px;

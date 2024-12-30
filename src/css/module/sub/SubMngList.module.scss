@@ -87,7 +87,8 @@
         background: $bg-color--default;
         &_chkbox {
           @include flex__row;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           @include device__query(tablet) {
             label {
               margin-left: 4px;
@@ -136,7 +137,8 @@
         column-gap: 8px;
         > div {
           @include flex__column;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           padding: 8px;
           background: $bg-color--default;
           border-radius: 8px;

@@ -8,7 +8,8 @@
   }
   &_wrapper {
     @include flex__column;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     .logo {
       max-width: 172px;
       margin-bottom: 20px;
@@ -18,7 +19,8 @@
     }
     .info {
       @include flex__column;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       margin-bottom: 12px;
       * {
         font-weight: 300;
@@ -29,7 +31,8 @@
     }
     ul {
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       li {
         &:not(:first-child) {
           @include position;

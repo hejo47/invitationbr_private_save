@@ -40,7 +40,8 @@
   .selector__item {
     @include position;
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 7px;
     padding: 8px 20px;
     font-size: $font-size--xsm;

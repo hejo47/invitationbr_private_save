@@ -87,7 +87,8 @@
       animation: 0.3s ease headerActive backwards;
       a {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         width: 40px;
         height: 40px;
         padding: 0 5px;
@@ -110,7 +111,8 @@
   @include flex__row;
   @include position(a, 0, 50%);
   transform: translateX(-50%);
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   column-gap: ratio(72, 1920);
   height: 100%;
   @include device__query(tablet) {
@@ -138,7 +140,8 @@
     a {
       @include position;
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       height: 100%;
       font-size: $font-size--setting-default;
       font-weight: 600;
@@ -176,7 +179,8 @@
 
 .sub__tool {
   @include flex__row;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   column-gap: 20px;
   @include device__query(tablet) {
     display: none;
@@ -195,7 +199,8 @@
     }
     a {
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       column-gap: 8px;
       span {
         font-size: $font-size--setting-sm;

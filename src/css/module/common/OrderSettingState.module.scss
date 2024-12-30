@@ -30,7 +30,8 @@
     @include position(a, 0, 50%);
     transform: translateX(-50%);
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 5px;
     width: 100%;
     height: 100%;
@@ -55,7 +56,6 @@
     }
     &_title {
       @include flex__row;
-      place-content: center;
       column-gap: 5px;
       width: 100%;
       height: 32px;

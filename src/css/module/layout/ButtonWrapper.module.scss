@@ -6,7 +6,8 @@
   column-gap: 8px;
   &.center {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     &fill {
       width: calc(100% - 8px);

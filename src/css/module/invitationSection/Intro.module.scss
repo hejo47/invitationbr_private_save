@@ -81,7 +81,8 @@
     }
     &_couple {
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       column-gap: 27px;
       margin-bottom: 8px;
       h2 {
@@ -132,7 +133,8 @@
       p {
         @include flex__row;
         column-gap: 7px;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         font-size: 1.875rem; // 30px
         font-weight: $font-weight--Bold;
         line-height: 1.1em;
@@ -146,7 +148,8 @@
   }
   .intro__photo {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 10px;
     width: 100%;
     height: 390px;
@@ -215,7 +218,8 @@
   }
   .intro__photo {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 10px;
     width: 100%;
     height: 320px;
@@ -244,7 +248,8 @@
       p {
         @include flex__row;
         column-gap: 7px;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         font-size: $font-size--sm;
         font-weight: $font-weight--Bold;
         line-height: 1.1em;
@@ -254,7 +259,8 @@
   }
   .intro__photo {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 10px;
     width: 100%;
     height: 420px;
@@ -470,7 +476,8 @@
     overflow: hidden;
     .intro__title_couple {
       @include flex__column;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       row-gap: 9px;
       height: 100%;
       margin-top: 6px;
@@ -507,7 +514,8 @@
       }
       .intro__title_couple {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         row-gap: 9px;
         height: unset;
         margin-top: 34px;
@@ -517,7 +525,8 @@
         }
         .simple__date {
           @include flex__column;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           p {
             width: unset;
             height: unset;

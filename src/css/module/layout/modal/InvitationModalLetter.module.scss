@@ -69,7 +69,8 @@
         }
         .contact {
           @include flex__row;
-          place-content: center;
+          justify-content: center;
+    align-items: center;
           column-gap: 24px;
           width: 100%;
           max-width: 72px;

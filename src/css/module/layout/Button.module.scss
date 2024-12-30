@@ -1,7 +1,8 @@
 @import "../../_module";
 .btn {
   @include flex__row_inline;
-  place-content: center;
+  justify-content: center;
+    align-items: center;
   flex-shrink: 0;
   padding: 12px 24px;
   font-size: $font-size--sm;
@@ -51,7 +52,8 @@
   &.close {
     @include position(a, 0, null, null, 0);
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
     padding: 0;
@@ -139,7 +141,8 @@
   }
   &.tab__delete {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     width: 16px;
     height: 16px;
     padding: 0;
@@ -150,7 +153,8 @@
   }
   &.header__preview {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     padding: 0;
@@ -171,7 +175,8 @@
     &__close {
       @include position(a, 15px, null, null, 15px);
       @include flex__row;
-      place-content: center;
+      justify-content: center;
+    align-items: center;
       width: 24px;
       height: 24px;
       padding: 0;

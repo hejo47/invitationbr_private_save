@@ -48,7 +48,8 @@
       }
       p {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         font-size: $font-size--default;
         font-weight: $font-weight--Medium;
         color: $text-color--temp;

@@ -170,7 +170,8 @@ textarea {
   padding: 0 !important;
   .mui-message {
     @include flex__row;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
     column-gap: 8px;
     color: #FFF !important;
     text-align: center !important;

@@ -83,7 +83,8 @@
       }
       .data__item {
         @include flex__row;
-        place-content: center;
+        justify-content: center;
+    align-items: center;
         width: calc(50% - 3px);
         input[type=radio] {
           display: none;
