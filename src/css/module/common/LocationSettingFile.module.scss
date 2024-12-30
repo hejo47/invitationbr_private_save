@@ -32,8 +32,7 @@
     }
     label {
       @include flex__row_inline;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       flex-shrink: 0;
       padding: 12px 24px;
       font-size: $font-size--setting-sm;

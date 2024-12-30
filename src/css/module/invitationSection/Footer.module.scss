@@ -5,16 +5,14 @@
   }
   &__copy {
     @include flex__row;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     width: 100%;
     padding: 33px 0;
     background: $bg-color--setting;
     &_wrap {
       @include position;
       @include flex__row;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       column-gap: 30px;
       &::after {
         @include position(a, 50%, 50%);
@@ -26,8 +24,7 @@
       }
       a {
         @include flex__row;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
         column-gap: 8px;
         img {
           width: 24px;
@@ -54,8 +51,7 @@
     background: $bg-color--tab;
     &_wrap {
       @include flex__column;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       text-align: center;
       .logo {
         width: 61px;

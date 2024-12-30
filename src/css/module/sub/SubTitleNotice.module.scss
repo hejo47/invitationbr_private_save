@@ -8,8 +8,7 @@
   &_wrap {
     ul {
       @include flex__column;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       @include device__query(tablet) {
         justify-content: center;
         align-items: flex-start;

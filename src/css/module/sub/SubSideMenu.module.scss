@@ -34,8 +34,7 @@
           color: #525252;
           @include device__query(tablet) {
             @include flex__row;
-            justify-content: center;
-            align-items: center;
+            place-content: center;
             width: 100%;
             font-size: $font-size--setting-sm;
             padding: 8px 0;

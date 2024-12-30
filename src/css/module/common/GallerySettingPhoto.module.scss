@@ -23,8 +23,7 @@
       label {
         @include position;
         @include flex__row_inline;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
         flex-shrink: 0;
         font-size: $font-size--setting-sm;
         font-weight: $font-weight--Medium;

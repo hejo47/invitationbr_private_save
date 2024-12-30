@@ -6,13 +6,11 @@
   margin: 0 auto;
   &_wrap {
     @include flex__row;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     width: 100%;
     ul {
       @include flex__row;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       background-color: #fff;
       border-radius: 12px;
       padding: 6px;

@@ -28,8 +28,7 @@
   column-gap: 32px;
   &.detail {
     @include flex__column;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     border-bottom: 1px solid $border-color--default;
     padding-top: 32px;
     padding-bottom: 32px;

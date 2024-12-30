@@ -6,8 +6,7 @@
     ul {
       @include flex__column;
       flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       width: 100%;
     }
   }

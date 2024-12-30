@@ -7,7 +7,7 @@
   margin-bottom: 16px;
   @include device__query(tablet) {
     margin-top: 20px;
-    justify-content: center;
+    place-content: center;
   }
   button {
     @include flex__row;

@@ -15,7 +15,6 @@
   }
   &.column {
     @include flex__column;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
   }
 }

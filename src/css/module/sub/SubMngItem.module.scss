@@ -1,8 +1,7 @@
 @import "../../_module";
 .sub__mng_ltem {
   @include flex__column;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
   width: calc(100% / 3);
   background: #FFF;
   border-radius: 8px;
@@ -24,8 +23,7 @@
   }
   .detail {
     @include flex__column;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     row-gap: 18px;
     width: 100%;
     margin-top: 22px;

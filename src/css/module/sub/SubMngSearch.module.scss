@@ -1,8 +1,7 @@
 @import "../../_module";
 .sub__mng_search {
   @include flex__row;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
   column-gap: 16px;
   width: 100%;
   max-width: 624px;

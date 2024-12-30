@@ -12,8 +12,7 @@
   }
   &_item {
     @include flex__column;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     border: 1px solid $border-color--default;
     border-radius: $radius--default;
     padding: 16px 4px;

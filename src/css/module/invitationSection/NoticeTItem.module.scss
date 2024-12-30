@@ -12,8 +12,7 @@
     width: 100%;
     & > a {
       @include flex__row;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       padding: 10px 3px;
       font-size: $font-size--ssm;
       letter-spacing: -0.03em;

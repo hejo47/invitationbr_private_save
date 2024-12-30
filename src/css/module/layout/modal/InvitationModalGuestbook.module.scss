@@ -31,8 +31,7 @@
     width: 100%;
     .data__wrap {
       @include flex__column;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       row-gap: 16px;
       width: 100%;
       p {

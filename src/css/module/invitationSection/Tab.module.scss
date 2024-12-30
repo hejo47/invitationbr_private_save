@@ -120,8 +120,7 @@
     // }
     > span {
       @include flex__row;
-      justify-content: center;
-      align-items: center;
+      place-content: center;
       vertical-align: middle;
       width: 100%;
       padding: 8px 3px;

@@ -15,8 +15,7 @@
   }
   &_total {
     @include flex__row;
-    justify-content: center;
-    align-items: center;
+    place-content: center;
     column-gap: 20px;
     width: 100%;
     max-width: 580px;

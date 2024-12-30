@@ -33,8 +33,7 @@
       }
       .swiper-slide {
         @include flex__row;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
         width: 100% !important;
         height: inherit !important;
         // aspect-ratio: 16/10;
@@ -46,8 +45,7 @@
       }
       .swiper-button-wrapper {
         @include flex__row;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
         column-gap: 16px;
       }
       .swiper-button-prev,

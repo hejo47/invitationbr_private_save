@@ -34,8 +34,7 @@
 
 .mobile__setting {
   @include flex__row;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
   font-family: $font-family--default !important;
   padding: 4px 19px 4px 5px;
   border-radius: $radius--default-sm;
