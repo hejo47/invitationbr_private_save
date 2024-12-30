@@ -16,6 +16,7 @@
     "browser-image-compression": "^2.0.2",
     "dayjs": "^1.11.13",
     "dnd-multi-backend": "^8.0.3",
+    "gsap": "^3.12.5",
     "immutability-helper": "^3.1.1",
     "npm": "^10.8.3",
     "rdndmb-html5-to-touch": "^8.0.3",

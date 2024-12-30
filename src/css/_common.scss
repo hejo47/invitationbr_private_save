@@ -20,6 +20,7 @@
 }
 html {
   font-size: var(--font-size--base);
+  overflow-x: hidden;
   @include device__query(tablet) {
     overflow-x: hidden;
   }
