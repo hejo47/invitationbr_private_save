@@ -121,7 +121,7 @@ const SubHeader = () => {
           </ul> : 
           <ul className={styles.sub__tool}>
             <li><Link to="/"><img src={myInfo} alt="" /><span>로그인</span></Link></li>
-            <li><Link to="/"><span>회원가입</span></Link></li>
+            <li><Link to="/Join"><span>회원가입</span></Link></li>
           </ul>
         
           }

@@ -1,7 +1,7 @@
 /* Import */
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import { nameHandler, IntroImgSeparator } from '../../utils/helpers';
+import { IntroImgSeparator } from '../../utils/helpers';
 // Component
 import MobileSettingButtonWrapper from "../layout/MobileSettingButtonWrapper.js";
 /* CSS Module */
@@ -61,7 +61,7 @@ const Intro = () => {
   }
   const nameInitHandler = (data, defaultData) => {
     const { lastname, firstname } = data;
-    return (lastname || firstname) ? nameHandler(`${lastname}${firstname}`) : defaultData;
+    return (lastname || firstname) ? `${lastname}${firstname}` : defaultData;
   }
   const placeInitHandler = (data, defaultData) => {
     const { placeName, placeDetail } = data;

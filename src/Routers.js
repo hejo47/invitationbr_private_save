@@ -6,6 +6,7 @@ import HeaderPreview from "./components/common/HeaderPreview";
 import View from "./components/page/View";
 import Main from "./components/main/Main";
 import Management from "./components/page/Management";
+import Join from "./components/page/Join";
 import SubNotice from "./components/page/SubNotice";
 import SubNoticeDetail from "./components/page/SubNoticeDetail";
 import SubWedding from "./components/page/SubWedding";
@@ -119,6 +120,18 @@ const Routers = () => {
           <>
             <SubHeader />
               <SubQna />
+            <SubFooter />
+          </>
+        }
+      >
+      </Route>
+
+      <Route
+        path="/Join"
+        element={
+          <>
+            <SubHeader />
+              <Join />
             <SubFooter />
           </>
         }
