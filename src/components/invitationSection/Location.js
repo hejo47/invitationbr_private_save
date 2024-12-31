@@ -67,12 +67,12 @@ const Location = () => {
                 {/* <LocationMap /> */}
               </div>
               <ul className={styles.map__search_list}>
-                <li className={styles.map__search_item}>
+                {/* <li className={styles.map__search_item}>
                   <Link to="#" onClick={(e => e.preventDefault())}>
                     <img src={iconMapTImg} alt="" />
                     <p>티맵</p>
                   </Link>
-                </li>
+                </li> */}
                 <li className={styles.map__search_item}>
                   <Link to="#" onClick={(e => e.preventDefault())}>
                     <img src={iconMapNaverImg} alt="" />
