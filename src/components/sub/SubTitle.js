@@ -33,7 +33,7 @@ const SubTitle = ({ subTitle, subContent, subPhoto, type }) => {
               start: "top", 
               end: "+=50%", 
               scrub: true,
-              markers: true, 
+              // markers: true, 
             },
           }
         );
