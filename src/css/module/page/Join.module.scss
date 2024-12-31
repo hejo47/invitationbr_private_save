@@ -52,9 +52,41 @@
     align-items: center;
     column-gap: 8px;
   }
+  &__text {
+    @include position;
+    margin-bottom: 12px;
+    label {
+      @include position(a, 50%, 16px);
+      transform: translateY(-50%);
+      font-size: $font-size--setting-sm;
+      color: #9E9E9E;
+    }
+    input[type="text"] {
+      padding-left: 120px;
+      height: 48px;
+      background-color: $bg-color--default;
+      border: 1px solid $border-color--default;
+    }
+    &_column {
+      margin-bottom: 28px;
+      margin-top: 28px;
+      input[type="password"] {
+        height: 48px;
+      }
+      label {
+        @include position(s);
+        padding-left: 8px;
+        display: block;
+        margin-bottom: 8px;
+        font-size: $font-size--setting-sm;
+        color: #777;
+      }
+    }
+  }
   button {
     width: 100%;
     margin-bottom: 16px;
+    max-width: unset !important;
   }
   small {
     display: block;

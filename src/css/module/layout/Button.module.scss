@@ -176,7 +176,7 @@
       @include position(a, 15px, null, null, 15px);
       @include flex__row;
       justify-content: center;
-    align-items: center;
+      align-items: center;
       width: 24px;
       height: 24px;
       padding: 0;
@@ -295,4 +295,12 @@
     }
   }
 
+  &.join {
+    &__disabled {
+      border-radius: 8px;
+      color: #FFF;
+      background: #DCDCDC;
+      pointer-events: none;
+    }
+  }
 }

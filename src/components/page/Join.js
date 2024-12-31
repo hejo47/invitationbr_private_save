@@ -68,34 +68,38 @@ const Join = () => {
             </div>
             <div className={styles.card__content}>
 
-              <div className={styles.card__item}>
+              <div className={styles.card__item_text}>
                 <div className={styles.card__text}>
                   <input type="text" />
                   <label htmlFor="">이름</label>
                 </div>
               </div>
 
-              <div className={styles.card__item}>
+              <div className={styles.card__item_text}>
                 <div className={styles.card__text}>
-                  <input type="checkbox" />
-                  <label htmlFor="">회원가입약관 동의(필수)</label>
+                  <input type="text" />
+                  <label htmlFor="">휴대폰 번호</label>
                 </div>
-                <Link to="/">약관보기</Link>
               </div>
-              <div className={styles.card__item}>
-                <div className={styles.card__text}>
-                  <input type="checkbox" />
-                  <label htmlFor="">개인정보처리방침안내의 내용(필수)</label>
+              <div className={styles.card__item_text}>
+                <div className={styles.card__text_column}>
+                  <label htmlFor="">비밀번호</label>
+                  <input type="password" />
                 </div>
-                <Link to="/">약관보기</Link>
+              </div>
+
+              <div className={styles.card__item} style={{paddingTop: "28px", borderTop: "1px solid #E5E8EB"}}>
+                <div className={styles.card__chkbox}>
+                  <input type="checkbox" />
+                  <label htmlFor="">휴대폰 문자메시지를 받겠습니다.</label>
+                </div>
               </div>
               
             </div>
             <ButtonWrapper styleType="center">
-              <Button content="휴대폰 본인 인증" styleType="point"></Button>
+              <Button content="가입 완료" styleType="join__disabled"></Button>
             </ButtonWrapper>
 
-            <small>휴대폰을 이용하여 본인인증을 진행합니다.</small>
           </div>
         </div>
       </SubWrapper>
