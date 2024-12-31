@@ -65,7 +65,7 @@ const SubHeader = () => {
               <Link 
                 to="/Produce">
                 청첩장 만들기
-                <img src={rightImg} alt="" />
+                {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
             {/* <li>
@@ -80,7 +80,7 @@ const SubHeader = () => {
                 onClick={() => setActiveMenu(false)}
               >
                 제작 관리
-                <img src={rightImg} alt="" />
+                {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
             <li>
@@ -90,7 +90,7 @@ const SubHeader = () => {
                 onClick={() => setActiveMenu(false)}
               >
                 예식순서
-                <img src={rightImg} alt="" />
+                {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
             <li>
@@ -100,7 +100,7 @@ const SubHeader = () => {
                 onClick={() => setActiveMenu(false)}
               >
                 공지사항
-                <img src={rightImg} alt="" />
+                {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
             <li>
@@ -110,7 +110,7 @@ const SubHeader = () => {
                 onClick={() => setActiveMenu(false)}
               >
                 자주하는 질문
-                <img src={rightImg} alt="" />
+                {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
           </ul>
