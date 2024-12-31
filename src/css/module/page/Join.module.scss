@@ -2,3 +2,78 @@
 .join {
   width: 100%;
 }
+
+.card {
+  margin: 50px auto 0;
+  padding: 80px 100px;
+  background-color: #FFF;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  &__wrap {
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 50px;
+    h4 {
+      font-size: $font-size--setting-lg;
+      font-weight: $font-weight--SemiBold;
+      span {
+        color: $text-color--essential;
+      }
+    }
+  }
+  &__content {
+    margin-bottom: 50px;
+  }
+  &__item {
+    @include flex__row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    margin-bottom: 16px;
+    &:first-child {
+      border-bottom: 1px solid $border-color--default;
+      padding-bottom: 22px;
+      margin-bottom: 20px;
+    }
+    label {
+      
+    }
+    a {
+      color: #9E9E9E;
+      font-size: $font-size--setting-sm;
+      text-decoration: underline;
+    }
+  }
+  &__chkbox {
+    @include flex__row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 8px;
+  }
+  button {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  small {
+    display: block;
+    font-size: $font-size--setting-sm;
+    color: #9E9E9E;
+    text-align: center;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: url(../../../img/state/checkbox_disabled.png) center / 24px;
+    @include device__query(tablet) {
+      background-size: 28px;
+      width: 26px;
+      height: 26px;
+    }
+    &:checked {
+      background-image: url(../../../img/state/checkbox_selected.svg);
+    }
+  }
+}
