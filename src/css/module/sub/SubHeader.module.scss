@@ -5,6 +5,7 @@
   background: #FFF;
   z-index: 10000;
   animation: 0.3s ease headerActive backwards;
+  border-bottom: 1px solid $border-color--default;
   @include device__query(tablet) {
     @include position(f, 0, 0, null, 0);
     z-index: 9999;
@@ -56,10 +57,10 @@
     height: 100%;
     padding: 0 20px;
     margin: 0 auto;
-    border-bottom: 1px solid $border-color--default;
     animation: 0.3s ease headerActive backwards;
     @include device__query(tablet) {
       height: 60px;
+      border-bottom: 1px solid $border-color--default;
     }
     .logo {
       width: 151px;
