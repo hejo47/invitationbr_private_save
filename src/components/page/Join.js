@@ -57,7 +57,6 @@ const Join = () => {
 
         <Card>
           <CardTitle content="회원정보" essential />
-
           <CardContent>
 
             <CardItem type="text">
@@ -77,7 +76,7 @@ const Join = () => {
             </CardItem>
             
           </CardContent>
-          
+
           <ButtonWrapper styleType="center">
             <Button content="가입 완료" styleType="join__disabled"></Button>
           </ButtonWrapper>

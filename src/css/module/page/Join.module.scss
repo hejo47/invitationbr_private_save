@@ -2,4 +2,28 @@
 .join {
   width: 100%;
 }
-
+.tool__wrap {
+  @include flex__row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  li {
+    a {
+      font-size: $font-size--setting-sm;
+      color: #777;
+    }
+    &:nth-of-type(2) {
+      a {
+        @include position;
+        &::after {
+          @include position(a, 50%, -11px);
+          content: "";
+          width: 1px;
+          height: 14px;
+          transform: translateY(-50%);
+          background-color: $border-color--default;
+        }
+      }
+    }
+  }
+}

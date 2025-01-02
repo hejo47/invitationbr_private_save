@@ -76,7 +76,8 @@
       @include flex__column;
       margin-bottom: 28px;
       margin-top: 28px;
-      input[type="password"] {
+      input[type="password"],
+      input[type="text"] {
         height: 48px;
         order: 1;
       }

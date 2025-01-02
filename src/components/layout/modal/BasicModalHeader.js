@@ -8,7 +8,8 @@ import styles from "../../../css/module/layout/modal/BasicModalHeader.module.scs
 export default function BasicModalHeader({ openvar, onClose }) {
   const headerNav = useNavigate();
   const previewHandler = () => {
-    headerNav('/Preview');  
+    headerNav('/Produce/Preview');
+    // 프리뷰로 가면 안됨 250102
   };
   return (
     <>

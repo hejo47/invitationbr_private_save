@@ -131,7 +131,7 @@ const SubHeader = () => {
             <li><Link to="/" onClick={() => setActiveMenu(false)}><span>로그아웃</span></Link></li>
           </ul> : 
           <ul className={styles.sub__tool}>
-            <li><Link to="/" onClick={() => setActiveMenu(false)}><img src={myInfo} alt="" /><span>로그인</span></Link></li>
+            <li><Link to="/Login" onClick={() => setActiveMenu(false)}><img src={myInfo} alt="" /><span>로그인</span></Link></li>
             <li><Link to="/Join" onClick={() => setActiveMenu(false)}><span>회원가입</span></Link></li>
           </ul>
           }
