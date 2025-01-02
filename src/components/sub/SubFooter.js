@@ -35,7 +35,7 @@ const SubFooter = () => {
           </li>
         </ul>
         <p className={styles.copy}>
-          Copyright © Weddingday All Rights Reserved.
+        © Marriageday All Rights Reserved.
         </p>
       </div>
     </footer>
