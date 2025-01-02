@@ -33,6 +33,20 @@
         transform: unset;
         padding: 24px 20px;
       }
+      .mo__menu {
+        width: calc(100% + 40px);
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid $border-color--default;
+        transform: translateX(-20px);
+        padding-left: 20px;
+        li {
+          a {
+            line-height: 2em;
+            font-size: $font-size--xsm;
+          }
+        }
+      }
       li {
         @include device__query(tablet) {
           height: unset;

@@ -113,17 +113,27 @@ const SubHeader = () => {
                 {isMobile ? <img src={rightImg} alt="" /> : null}
               </Link>
             </li>
+            {isMobile ? 
+            <ul className={styles.mo__menu}>
+              <li>
+                <Link to="/" onClick={() => setActiveMenu(false)}><span>회원가입약관</span></Link>
+              </li>
+              <li>
+                <Link to="/" onClick={() => setActiveMenu(false)}><span>개인정보처리방침안내</span></Link>
+              </li>
+            </ul> :
+            null
+          }
           </ul>
           {false ? 
           <ul className={styles.sub__tool}>
-            <li><Link to="/"><img src={myInfo} alt="" /><span>정보수정</span></Link></li>
-            <li><Link to="/"><span>로그아웃</span></Link></li>
+            <li><Link to="/" onClick={() => setActiveMenu(false)}><img src={myInfo} alt="" /><span>정보수정</span></Link></li>
+            <li><Link to="/" onClick={() => setActiveMenu(false)}><span>로그아웃</span></Link></li>
           </ul> : 
           <ul className={styles.sub__tool}>
-            <li><Link to="/"><img src={myInfo} alt="" /><span>로그인</span></Link></li>
-            <li><Link to="/Join"><span>회원가입</span></Link></li>
+            <li><Link to="/" onClick={() => setActiveMenu(false)}><img src={myInfo} alt="" /><span>로그인</span></Link></li>
+            <li><Link to="/Join" onClick={() => setActiveMenu(false)}><span>회원가입</span></Link></li>
           </ul>
-        
           }
           
         </div>
