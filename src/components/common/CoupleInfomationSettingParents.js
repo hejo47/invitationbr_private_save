@@ -29,7 +29,7 @@ const CoupleInfomationSettingParents = ({ pName, itemKey, coupleKey, data, onCha
         onChange={onChange}
       />
       <CheckItem 
-        name={itemKey === "Dad" ? "dadDeceased" : "momDeceased"} 
+        name={itemKey === "Dad" ? "dadDeceased" : "momDeceased"}
         id={`${coupleKey}${itemKey}Dep`} 
         content={"故"} 
         infoType={coupleKey === "M" ? "groomParentInfo" : "brideParentInfo"}

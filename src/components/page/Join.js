@@ -19,7 +19,7 @@ const Join = () => {
       <SubTitle 
         type="mng"
         subTitle="회원가입"
-        subContent="간편하게 가입하고 무료 모바일청첩장 서비스를 이용하세요."
+        subContent={`간편하게 가입하고${isMobile ? "\n" : " "}무료 모바일청첩장 서비스를 이용하세요.`}
       />
       {/* <ManageList></ManageList> */}
       <SubWrapper column>
@@ -42,14 +42,14 @@ const Join = () => {
                   <input type="checkbox" />
                   <label htmlFor="">회원가입약관 동의(필수)</label>
                 </div>
-                <Link to="/">약관보기</Link>
+                <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
               </div>
               <div className={styles.card__item}>
                 <div className={styles.card__chkbox}>
                   <input type="checkbox" />
                   <label htmlFor="">개인정보처리방침안내의 내용(필수)</label>
                 </div>
-                <Link to="/">약관보기</Link>
+                <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
               </div>
               
             </div>

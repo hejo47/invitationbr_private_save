@@ -31,6 +31,10 @@
         padding-left: 4px;
       }
     }
+    p {
+      white-space: pre-wrap;
+      line-height: 1.6em;
+    }
   }
   &_photo {
     width: 100%;
