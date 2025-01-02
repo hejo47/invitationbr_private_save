@@ -66,15 +66,20 @@
       font-size: $font-size--setting-sm;
       color: #9E9E9E;
     }
-    input[type="text"] {
+    input[type="text"],
+    input[type="password"] {
       padding-left: 120px;
       height: 48px;
       background-color: $bg-color--default;
       border: 1px solid $border-color--default;
     }
+    input[type="password"] {
+      background-color: #FFF;
+      padding-left: 120px;
+    }
     &_column {
       @include flex__column;
-      margin-bottom: 28px;
+      margin-bottom: 12px;
       margin-top: 28px;
       input[type="password"],
       input[type="text"] {
@@ -92,9 +97,56 @@
       }
     }
   }
+  &__sms {
+    @include flex__row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 28px;
+    padding-top: 28px;
+    column-gap: 12px;
+    border-top: 1px solid $border-color--default;
+    span {
+      width: 100%;
+      font-size: $font-size--setting-sm;
+      margin-bottom: 8px;
+    }
+    > div {
+      width: 50%;
+      max-width: 192px;
+      @include device__query(tablet) {
+        width: 100%;
+        max-width: unset;
+      }
+      input[type="radio"] {
+        background-image: unset;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+      label {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__radio {
+    @include flex__column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+    > div {
+      @include flex__row;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 6px;
+      label {
+      }
+    }
+  }
   button {
     width: 100%;
-    margin-bottom: 16px;
     max-width: unset !important;
     @include device__query(tablet) {
       font-size: $font-size--setting-default !important;

@@ -9,6 +9,8 @@ import Management from "./components/page/Management";
 import Join from "./components/page/Join";
 import Login from "./components/page/Login";
 import Find from "./components/page/Find";
+import Modify from "./components/page/Modify";
+import RemoveAccount from "./components/page/RemoveAccount";
 import SubNotice from "./components/page/SubNotice";
 import SubNoticeDetail from "./components/page/SubNoticeDetail";
 import SubWedding from "./components/page/SubWedding";
@@ -163,6 +165,31 @@ const Routers = () => {
         }
       >
       </Route>
+
+      <Route
+        path="/Modify"
+        element={
+          <>
+            <SubHeader />
+              <Modify />
+            <SubFooter />
+          </>
+        }
+      >
+      </Route>
+
+      <Route
+        path="/RemoveAccount"
+        element={
+          <>
+            <SubHeader />
+              <RemoveAccount />
+            <SubFooter />
+          </>
+        }
+      >
+      </Route>
+
     </Routes>
   );
 };

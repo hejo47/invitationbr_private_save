@@ -17,67 +17,50 @@ import CardInput from "../layout/CardInput.js";
 // Context
 import { SetContext } from "../../store/option-set-context.js";
 
-const Find = () => {
+const Modify = () => {
   const { isMobile } = useContext(SetContext);
   return (
     <div className={styles.join}>
       {
-        false ?
         <>
           <SubTitle 
             type="mng"
-            subTitle="비밀번호 변경"
-            subContent={`새로운 비밀번호를 입력해주세요.`}
+            subTitle="정보수정"
+            subContent={`비밀번호, SMS 수신 여부, 회원 탈퇴를${isMobile ? "\n" : " "}설정할 수 있습니다.`}
           />
           <SubWrapper column>
             <Card>
+              <CardTitle content="회원정보" essential />
               <CardContent>
                 <CardItem type="text">
-                  <CardInput type="password" id="text2" content="비밀번호" column />
+                  <CardInput type="text" id="text1" content="이름" />
+                </CardItem>
+                <CardItem type="text">
+                  <CardInput type="text" id="text2" content="휴대폰 번호" />
                 </CardItem>
 
                 <CardItem type="text">
-                  <CardInput type="password" id="text1" content="비밀번호 재입력" column />
+                  <CardInput type="password" id="text3" content="비밀번호 변경" column />
+                  <CardInput type="password" id="text4" content="" />
                 </CardItem>
+
+                <CardItem>
+                  <CardInput type="sms" id="sms" content="SMS 수신 여부" column />
+                </CardItem>
+
               </CardContent>
 
               <ButtonWrapper styleType="center">
                 <Button content="비밀번호 변경" styleType="join__disabled"></Button>
               </ButtonWrapper>
-            </Card>
-          </SubWrapper>
-        </> : 
-        <>
-          <SubTitle 
-            type="mng"
-            subTitle="비밀번호 찾기"
-            subContent={`이름과 휴대폰 번호 입력 후${isMobile ? "\n" : " "}‘인증번호 발송’ 버튼을 클릭하세요.`}
-          />
-          <SubWrapper column>
-            <Card>
-              <CardContent>
-
-                <CardItem type="text">
-                  <CardInput type="text" id="text2" content="이름" column />
-                </CardItem>
-
-                <CardItem type="text">
-                  <CardInput type="text" id="text1" content="휴대폰 번호" column />
-                </CardItem>
-                
-              </CardContent>
-
-              <ButtonWrapper styleType="center">
-                <Button content="인증번호 발송" styleType="join__disabled"></Button>
-              </ButtonWrapper>
+              <Link to="/RemoveAccount" className={styles.remove__account}>회원탈퇴</Link>
 
             </Card>
           </SubWrapper>
         </>
       }
-
     </div>
   )
 }
 
-export default Find;
+export default Modify;
