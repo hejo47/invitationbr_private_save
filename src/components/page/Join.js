@@ -9,6 +9,11 @@ import SubTitle from "../sub/SubTitle.js";
 import SubWrapper from "../sub/SubWrapper.js";
 import ButtonWrapper from "../layout/ButtonWrapper.js"
 import Button from "../layout/Button.js"
+import Card from "../layout/Card.js"
+import CardTitle from "../layout/CardTitle.js";
+import CardContent from "../layout/CardContent.js";
+import CardItem from "../layout/CardItem.js";
+import CardInput from "../layout/CardInput.js";
 // Context
 import { SetContext } from "../../store/option-set-context.js";
 
@@ -23,85 +28,60 @@ const Join = () => {
       />
       {/* <ManageList></ManageList> */}
       <SubWrapper column>
-        <div className={styles.card}>
-          <div className={styles.card__wrap}>
-            <div className={styles.card__title}>
-              <h4>약관동의<span>*</span></h4>
-            </div>
-            <div className={styles.card__content}>
+        <Card>
+          <CardTitle content="약관동의" essential />
+          <CardContent>
+            <CardItem>
+              <CardInput type="checkbox" id="allChk" content="모두 동의" />
+            </CardItem>
 
-              <div className={styles.card__item}>
-                <div className={styles.card__chkbox}>
-                  <input type="checkbox" />
-                  <label htmlFor="">모두 동의</label>
-                </div>
-              </div>
+            <CardItem>
+              <CardInput type="checkbox" id="chk1" content="회원가입약관 동의(필수)" />
+              <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
+            </CardItem>
 
-              <div className={styles.card__item}>
-                <div className={styles.card__chkbox}>
-                  <input type="checkbox" />
-                  <label htmlFor="">회원가입약관 동의(필수)</label>
-                </div>
-                <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
-              </div>
-              <div className={styles.card__item}>
-                <div className={styles.card__chkbox}>
-                  <input type="checkbox" />
-                  <label htmlFor="">개인정보처리방침안내의 내용(필수)</label>
-                </div>
-                <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
-              </div>
-              
-            </div>
-            <ButtonWrapper styleType="center">
-              <Button content="휴대폰 본인 인증" styleType="point"></Button>
-            </ButtonWrapper>
+            <CardItem>
+              <CardInput type="checkbox" id="chk2" content="개인정보처리방침안내의 내용(필수)" />
+              <Link to="/">{isMobile ? "보기" : "약관보기"}</Link>
+            </CardItem>
+            
+          </CardContent>
 
-            <small>휴대폰을 이용하여 본인인증을 진행합니다.</small>
-          </div>
-        </div>
+          <ButtonWrapper styleType="center">
+            <Button content="휴대폰 본인 인증" styleType="point"></Button>
+          </ButtonWrapper>
 
-        <div className={styles.card}>
-          <div className={styles.card__wrap}>
-            <div className={styles.card__title}>
-              <h4>회원정보<span>*</span></h4>
-            </div>
-            <div className={styles.card__content}>
+          <small>휴대폰을 이용하여 본인인증을 진행합니다.</small>
 
-              <div className={styles.card__item_text}>
-                <div className={styles.card__text}>
-                  <input type="text" />
-                  <label htmlFor="">이름</label>
-                </div>
-              </div>
+        </Card>
 
-              <div className={styles.card__item_text}>
-                <div className={styles.card__text}>
-                  <input type="text" />
-                  <label htmlFor="">휴대폰 번호</label>
-                </div>
-              </div>
-              <div className={styles.card__item_text}>
-                <div className={styles.card__text_column}>
-                  <label htmlFor="">비밀번호</label>
-                  <input type="password" />
-                </div>
-              </div>
+        <Card>
+          <CardTitle content="회원정보" essential />
 
-              <div className={styles.card__item} style={{paddingTop: "28px", borderTop: "1px solid #E5E8EB"}}>
-                <div className={styles.card__chkbox}>
-                  <input type="checkbox" />
-                  <label htmlFor="">휴대폰 문자메시지를 받겠습니다.</label>
-                </div>
-              </div>
-              
-            </div>
-            <ButtonWrapper styleType="center">
-              <Button content="가입 완료" styleType="join__disabled"></Button>
-            </ButtonWrapper>
+          <CardContent>
 
-          </div>
-        </div>
+            <CardItem type="text">
+              <CardInput type="text" id="text1" content="이름" />
+            </CardItem>
+
+            <CardItem type="text">
+              <CardInput type="text" id="text2" content="휴대폰 번호" />
+            </CardItem>
+
+            <CardItem type="text">
+              <CardInput type="password" id="text3" content="비밀번호" column />
+            </CardItem>
+
+            <CardItem style={{paddingTop: "28px", borderTop: "1px solid #E5E8EB"}}>
+              <CardInput type="checkbox" id="chk3" content="휴대폰 문자메시지를 받겠습니다." />
+            </CardItem>
+            
+          </CardContent>
+          
+          <ButtonWrapper styleType="center">
+            <Button content="가입 완료" styleType="join__disabled"></Button>
+          </ButtonWrapper>
+        </Card>
       </SubWrapper>
 
     </div>
