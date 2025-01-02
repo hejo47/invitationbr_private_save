@@ -1,5 +1,5 @@
 // Import
-import { autoHyphenHandler, nameHandler } from '../../utils/helpers';
+import { autoHyphenHandler } from '../../utils/helpers';
 /* Component */
 import CheckItem from "./CheckItem";
 /* CSS Module */
@@ -15,7 +15,7 @@ const CoupleInfomationSettingParents = ({ pName, itemKey, coupleKey, data, onCha
         name={itemKey === "Dad" ? "dadName" : "momName"}
         className={styles.info__parentname} 
         placeholder={`${pName} 성함`} 
-        value={nameHandler(itemKey === "Dad" ? data.dadName : data.momName)}
+        value={itemKey === "Dad" ? data.dadName : data.momName}
         onChange={onChange}
         maxLength={5}
       />

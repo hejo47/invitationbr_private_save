@@ -1,6 +1,6 @@
 /* Import */
 import { useState, useEffect } from "react";
-import { autoHyphenHandler, nameHandler } from '../../utils/helpers';
+import { autoHyphenHandler } from '../../utils/helpers';
 /* Component */
 import OptionSelector from "./OptionSelector"
 /* CSS Module */
@@ -108,7 +108,7 @@ const CoupleInfomationSettingBasic = ({ coupleKey, value, onChange }) => {
         name="lastname" 
         className={styles.info__firstname} 
         placeholder={`성`} 
-        value={nameHandler(value.lastname)}
+        value={value.lastname}
         onChange={onChange}
         maxLength={2}
       />
@@ -118,7 +118,7 @@ const CoupleInfomationSettingBasic = ({ coupleKey, value, onChange }) => {
         name="firstname" 
         className={styles.info__name} 
         placeholder={`이름`} 
-        value={nameHandler(value.firstname)}
+        value={value.firstname}
         onChange={onChange}
         maxLength={3}
       />

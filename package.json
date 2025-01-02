@@ -1,5 +1,5 @@
 {
-  "homepage": "http://invitationbr_private_save.com",
+  "homepage": "https://marriageday.co.kr/",
   "name": "invitationbr_private_save",
   "version": "0.1.0",
   "private": true,
@@ -13,9 +13,12 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "basic-ftp": "^5.0.5",
     "browser-image-compression": "^2.0.2",
     "dayjs": "^1.11.13",
     "dnd-multi-backend": "^8.0.3",
+    "dotenv": "^16.4.7",
+    "gh-pages": "^6.2.0",
     "gsap": "^3.12.5",
     "immutability-helper": "^3.1.1",
     "npm": "^10.8.3",
@@ -39,7 +42,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && node upload.js"
   },
   "eslintConfig": {
     "extends": [
