@@ -35,3 +35,10 @@
   display: block;
   margin-top: 18px;
 }
+.notice {
+  color: red;
+  order: 2;
+  margin-top: 12px;
+  padding-left: 8px;
+  font-size: $font-size--setting-sm;
+}

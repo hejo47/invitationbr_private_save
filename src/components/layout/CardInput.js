@@ -2,6 +2,7 @@
 import { useContext, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import ReactDOM from "react-dom";
+import { autoHyphenHandler } from '../../utils/helpers';
 /* CSS */
 import styles from "../../css/module/layout/Card.module.scss";
 /* Component */
@@ -13,7 +14,7 @@ import smsNoImgC from "../../img/icon/icon_sms_no_c.png";
 // Context
 import { SetContext } from "../../store/option-set-context.js";
 
-const CardInput = ({ type, id, content, column, style }) => {
+const CardInput = ({ type, id, content, value, column, onChange, maxLength, style, placeholder, children }) => {
   const { isMobile } = useContext(SetContext);
   const [ smsState, setSmsState ] = useState();
   {
@@ -92,8 +93,23 @@ const CardInput = ({ type, id, content, column, style }) => {
           className={`${column ? styles.card__text_column : styles.card__text}`}
           style={style}
         >
-          <input type={type} id={id} name={id} />
+          <input 
+            type={type} 
+            id={id} 
+            name={id} 
+            value={value} 
+            onChange={(e) => {
+              if(id === "phone") {
+                onChange(autoHyphenHandler(e.target.value))
+              } else {
+                onChange(e.target.value)
+              }
+            }} 
+            maxLength={maxLength ? maxLength : null}
+            placeholder={placeholder}
+          />
           <label htmlFor={id}>{content}</label>
+          {children}
         </div>
       )
     }

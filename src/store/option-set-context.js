@@ -46,5 +46,10 @@ export const SetContext = createContext({
   setAttendGuestList: () => {},
 
   openSettingTab: {},
-  setOpenSettingTab: () => {}
+  setOpenSettingTab: () => {},
+
+  phone: "",
+  setPhone: () => {},
+  password: "",
+  setPassword: () => {},
 });

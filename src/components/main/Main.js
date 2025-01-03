@@ -25,54 +25,57 @@ import { SetContext } from "../../store/option-set-context.js";
 const Main = () => {
   const { isMobile } = useContext(SetContext);
   const location = useLocation();
-  useEffect(() => {
-    // 페이지가 메인 페이지일 때만 Butter.js 로드
-    if (location.pathname === '/') {
-      const script = document.createElement('script');
-      script.src = '/js/butter.js';  // 경로 설정 (자신의 경로로 맞춰주세요)
-      script.async = true;
+  const butterInitialized = useRef(false);
+  // useEffect(() => {
+  //   if (location.pathname === '/' && !butterInitialized.current) {
+  //     const script = document.createElement('script');
+  //     script.src = '/js/butter.js'; 
+  //     script.async = true;
 
-      script.onload = () => {
-        if (window.butter && typeof window.butter.init === 'function') {
-          const butterWrapper = document.getElementById('butter');
-          if (butterWrapper) {
-            window.butter.init({
-              wrapperId: 'butter',
-              wrapperDamper: 0.07,
-              cancelOnTouch: false,
-            });
-          }
-        } else {
-          console.error('Butter.js가 제대로 로드되지 않았습니다.');
-        }
-      };
+  //     script.onload = () => {
+  //       if (window.butter && typeof window.butter.init === 'function') {
+  //         const butterWrapper = document.getElementById('butter');
+  //         if (butterWrapper) {
+  //           window.butter.init({
+  //             wrapperId: 'butter',
+  //             wrapperDamper: 0.07,
+  //             cancelOnTouch: false,
+  //           });
+  //           butterInitialized.current = true; 
+  //         }
+  //       } else {
+  //         console.error('Butter.js가 제대로 로드되지 않았습니다.');
+  //       }
+  //     };
 
-      script.onerror = () => {
-        console.error('Butter.js 로드 실패');
-      };
+  //     script.onerror = () => {
+  //       console.error('Butter.js 로드 실패');
+  //     };
 
-      document.body.appendChild(script);
+  //     document.body.appendChild(script);
 
-      return () => {
-        document.body.removeChild(script);
+  //     return () => {
+  //       document.body.removeChild(script);
 
-        if (window.butter && typeof window.butter.cancel === 'function') {
-          window.butter.cancel();
-        }
-      };
-    }
+  //       if (window.butter && typeof window.butter.cancel === 'function') {
+  //         window.butter.cancel();
+  //       }
 
-    return () => {
-      if (window.butter && typeof window.butter.cancel === 'function') {
-        window.butter.cancel();
-      }
-    };
+  //       butterInitialized.current = false;
+  //     };
+  //   }
 
-  }, [location.pathname]);  // 경로가 변경될 때마다 실행
+  //   return () => {
+  //     if (window.butter && typeof window.butter.cancel === 'function') {
+  //       window.butter.cancel();
+  //     }
+  //   };
+
+  // }, [location.pathname]);  
   return (
     <>
       <SubHeader />
-      <div id="butter" className="scroll__wrapper">
+      <div id="butter" className={styles.scroll__wrapper}>
         <section className="content">
         <article className="visual">
           <div className="swiper-container">

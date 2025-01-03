@@ -16,7 +16,7 @@ const SetProvider = ({ children }) => {
     };
   }, []);
   const [settingOrderList, setSettingOrderList] = useState(initList.settingOrderList);
-  const basicSettingList = initList.basicSettingList
+  const basicSettingList = initList.basicSettingList;
   const [kakaoInfoList, setKakaoInfoList] = useState(initList.kakaoInfoList);
   const [urlInfoList, setUrlInfoList] = useState(initList.urlInfoList);
   const [selectSettingList, setSelectSettingList] = useState(initList.selectSettingList);
@@ -37,6 +37,7 @@ const SetProvider = ({ children }) => {
   const [openSettingTab, setOpenSettingTab] = useState("");
   const [attendGuestList, setAttendGuestList] = useState(initList.attendGuestList);
   const settingList = initList.settingList;
+
   return (
     <SetContext.Provider
       value={{
