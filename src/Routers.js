@@ -25,7 +25,9 @@ const Routers = () => {
   return (
     <Routes>
       {/* Main Route */}
-      <Route path="/" element={<Navigate to="/Produce" replace />} />
+      <Route path="/" element={
+        <Main></Main>
+      } />
 
       {/* Produce Route */}
       <Route
