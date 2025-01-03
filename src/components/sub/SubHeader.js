@@ -56,7 +56,7 @@ const SubHeader = () => {
   return (
     <div className={`${styles.sub__header} ${activeMenu && isMobile ? styles["active"] : ""}`}>
       <div className={`${styles.sub__header_wrapper} ${styles.active}`} ref={headerRef}>
-        <Link to="/Manager" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src={logoImg} alt="시집가는 날" />
         </Link>
         <div className={styles.sub_ref} ref={subRef}>
@@ -154,7 +154,7 @@ const SubHeader = () => {
           ref={moHeaderRef}
           style={{display: "none"}}
         >
-          <Link to="/Manager" className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <img src={rightImg} alt="시집가는 날" />
           </Link>
           <h2>공지사항</h2>

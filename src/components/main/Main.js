@@ -1,5 +1,6 @@
 /* Import */
 import { useState, useContext, useEffect, useRef } from "react";
+import { useLocation } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Thumbs, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -23,32 +24,51 @@ import { SetContext } from "../../store/option-set-context.js";
 
 const Main = () => {
   const { isMobile } = useContext(SetContext);
+  const location = useLocation();
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/js/butter.js'; // 경로를 실제로 사용하는 경로로 설정하세요.
-    script.async = true;
-  
-    script.onload = () => {
-      if (window.butter && typeof window.butter.init === 'function') {
-        window.butter.init({
-          wrapperId: 'butter',
-          wrapperDamper: 0.07, 
-          cancelOnTouch: false,
-        });
-      } else {
-        console.error('Butter.js가 제대로 로드되지 않았습니다.');
-      }
-    };
-  
-    document.body.appendChild(script);
-  
+    // 페이지가 메인 페이지일 때만 Butter.js 로드
+    if (location.pathname === '/') {
+      const script = document.createElement('script');
+      script.src = '/js/butter.js';  // 경로 설정 (자신의 경로로 맞춰주세요)
+      script.async = true;
+
+      script.onload = () => {
+        if (window.butter && typeof window.butter.init === 'function') {
+          const butterWrapper = document.getElementById('butter');
+          if (butterWrapper) {
+            window.butter.init({
+              wrapperId: 'butter',
+              wrapperDamper: 0.07,
+              cancelOnTouch: false,
+            });
+          }
+        } else {
+          console.error('Butter.js가 제대로 로드되지 않았습니다.');
+        }
+      };
+
+      script.onerror = () => {
+        console.error('Butter.js 로드 실패');
+      };
+
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+
+        if (window.butter && typeof window.butter.cancel === 'function') {
+          window.butter.cancel();
+        }
+      };
+    }
+
     return () => {
-      document.body.removeChild(script);
-      if (window.butter) {
+      if (window.butter && typeof window.butter.cancel === 'function') {
         window.butter.cancel();
       }
     };
-  }, []); 
+
+  }, [location.pathname]);  // 경로가 변경될 때마다 실행
   return (
     <>
       <SubHeader />
